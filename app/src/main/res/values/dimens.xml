@@ -4,6 +4,8 @@
     <!-- margin size -->
     <dimen name="margin_size_5dp">5dp</dimen>
     <dimen name="margin_size_10dp">10dp</dimen>
+    <dimen name="margin_size_20dp">20dp</dimen>
+    <dimen name="margin_size_30dp">30dp</dimen>
     <dimen name="margin_size_50dp">50dp</dimen>
 
     <!-- corner radius size -->

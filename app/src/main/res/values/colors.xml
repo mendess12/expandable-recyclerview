@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="stroke_color">#6750A3</color>
     <color name="white">#FFFFFFFF</color>
     <color name="message_text_color">#9A9595</color>
+    <color name="background">#E3E9F1</color>
 </resources>
