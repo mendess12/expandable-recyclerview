@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.expandablerecyclerview.R
 import com.example.expandablerecyclerview.model.LanguageData
 
-class LanguageAdapter(val languageList: List<LanguageData>) :
+class LanguageAdapter(private val languageList: List<LanguageData>) :
     RecyclerView.Adapter<LanguageAdapter.LanguageViewHolder>() {
     class LanguageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var title: TextView = itemView.findViewById(R.id.titleTv)
