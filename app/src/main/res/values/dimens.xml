@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- margin size -->
+    <dimen name="margin_size_5dp">5dp</dimen>
+    <dimen name="margin_size_10dp">10dp</dimen>
+    <dimen name="margin_size_50dp">50dp</dimen>
+
+    <!-- corner radius size -->
+    <dimen name="corner_radius_size_5dp">5dp</dimen>
+    <dimen name="corner_radius_size_100dp">100dp</dimen>
+
+    <!-- padding size -->
+    <dimen name="padding_size_8dp">8dp</dimen>
+
+    <!-- text size -->
+    <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="text_size_24sp">24sp</dimen>
+
+    <!-- stroke width -->
+    <dimen name="stroke_width_1dp">1dp</dimen>
+
+</resources>
