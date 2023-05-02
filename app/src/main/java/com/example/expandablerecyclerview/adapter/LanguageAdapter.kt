@@ -41,8 +41,19 @@ class LanguageAdapter(private val languageList: List<LanguageData>) :
         holder.expandableLayout.visibility = if (isExpandable) View.VISIBLE else View.GONE
 
         holder.linearLayout.setOnClickListener {
+            isAnyItemExpanded(position)
             languageData.expandable = !languageData.expandable
-            notifyDataSetChanged()
+            notifyItemChanged(position, Unit)
+        }
+    }
+
+    private fun isAnyItemExpanded(position: Int) {
+        val temp = languageList.indexOfFirst {
+            it.expandable
+        }
+        if (temp >= 0 && temp != position) {
+            languageList[temp].expandable = false
+            notifyItemChanged(temp, 0)
         }
     }
 }
