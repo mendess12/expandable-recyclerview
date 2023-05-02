@@ -6,48 +6,63 @@
     android:layout_margin="@dimen/margin_size_5dp"
     android:background="@drawable/background">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="@dimen/margin_size_50dp"
-        android:layout_height="@dimen/margin_size_50dp"
-        android:layout_margin="@dimen/margin_size_10dp"
-        app:cardCornerRadius="@dimen/corner_radius_size_100dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/logoIv"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="@dimen/margin_size_50dp"
+            android:layout_height="@dimen/margin_size_50dp"
+            android:layout_margin="@dimen/margin_size_10dp"
+            app:cardCornerRadius="@dimen/corner_radius_size_100dp">
+
+            <ImageView
+                android:id="@+id/logoIv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/kotlin" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/titleTv"
+            style="@style/medium_24sp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/kotlin" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="@string/kotlin"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/titleTv"
-        style="@style/medium_24sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/kotlin"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/messageTv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/messageTv"
-        style="@style/medium_18sp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/expandableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_size_10dp"
-        android:text="@string/kotlin_message"
-        android:textColor="@color/message_text_color"
-        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
+        <TextView
+            android:id="@+id/messageTv"
+            style="@style/medium_18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/kotlin_message"
+            android:textColor="@color/message_text_color"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
